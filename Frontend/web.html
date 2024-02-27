@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+    <head> 
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anta&family=Kode+Mono:wght@400..700&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+        <title> Scholar Stack </title>
+    </head>
+    <body>
+        <header>
+            <div class="font">
+            <h1> Scholar Stack</h1>
+            <h2> Created by Team Slam </h2>
+                <form id="searchForm" action="/search" method="GET">
+                <label for="search"> </label>
+                <input type="text" id="search" name="query">
+                </form>
+            </div>
+                <br>
+        <div class="radio-container">
+                <label>
+                    <input type="radio" name="searchType" value="Thesis">
+                    Thesis
+                </label>
+                <label>
+                    <input type="radio" name="searchType" value="Capstone">
+                    Capstone
+                </label>
+                
+        </div>
+        <div class="sidebar">
+            <div class="top"> 
+            <div class="logo">
+                    <img src ="MicrosoftTeams-image.png" alt="Slam-logo" class="sidebar-logo">
+                    <span>  </span>
+            </div>
+            <i class='bx bxs-right-arrow' id="btn"></i>
+            </div>
+            <div class="user" alt="">
+                <div>
+                    
+                </div>
+            </div>
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-log-in'></i>
+                        <span class="nav-item"> Login</span>
+                    </a>
+                    <span class="tooltip"></span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-user-pin' ></i>
+                        <span class="nav-item"> About us</span>
+                    </a>
+                    <span class="tooltip"> </span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="container">
+                <h1>
+                </h1>
+            </div>
+        </div>
+    
+
+    </body>
+    <script>
+        let btn = document.querySelector('#btn');
+        let sidebar = document.querySelector('.sidebar');
+
+        btn.onclick = function(){
+            sidebar.classList.toggle('active');
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.addEventListener('wheel', function(event) {
+                if (event.deltaY !== 0) {
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
+    
+
+</html>

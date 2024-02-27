@@ -1,0 +1,168 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #e2d87e, #989aeb);
+    overflow-y: hidden;
+}
+
+h1 {
+    font-family: "Anta", sans-serif;
+    font-size: 6vw;
+    position: relative;
+    text-align: center;
+    margin-top: 10vw;
+}
+
+h2 {
+    font-family: Arial, sans-serif; 
+    font-size: 2vw;
+    text-align: center;
+    position: absolute;
+    right: 31vw;
+    top: 15vw;
+
+}
+
+input[type="text"] {
+    border-radius: 30px;
+    text-align: center;
+    width: 500px;
+    display: block;
+    margin: -20px auto 0;
+    margin-top: 1vw;
+    padding: 10px;
+}
+
+.radio-container {
+    text-align: center;
+}
+
+.radio-container label {
+    display: inline-block;
+    margin-right: 8px; /* Corrected typo: changed '8cqi' to '8px' */
+}
+
+.logo {
+    position: absolute;
+    bottom: 50px;
+    transition: opacity 0.5s ease; /* Add transition for smooth visibility change */
+    opacity: 1;
+}
+
+.sidebar-logo {
+    width: 30px;
+    right: 10px;
+    border-radius: 100%;
+    text-align: center;
+    opacity: 1;
+}
+
+.sidebar {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    height: 100vh; 
+    width: 60px;
+    background:white;
+    padding: 0.4rem;
+    transition: all 0.5s ease;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar.active ~ .main-content {
+    left: 250px;
+    width: calc(100% - 250px);
+    
+}
+.sidebar.active{
+    width: 250px;
+    background-color: grey;  
+}
+.sidebar #btn {
+    position: absolute;
+    color: black;
+    top: .4rem;
+    left: 70%; /* Adjusted left position */
+    font-size: 1.2rem;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+.sidebar.active #btn{
+    left: 90%;
+    transform: rotate(-180%);
+}
+.user {
+    position: absolute;
+    bottom: 100px; /* Adjusted bottom position */
+    right: 50vw;
+    transition: opacity 0.5s ease; /* Add transition for smooth visibility change */
+    opacity: 1; /* Initially visible */
+}
+
+.sidebar.active .user {
+    opacity: 0; /* Hide the user section when the sidebar is active */
+}
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%; /* Set width to 100% */
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+    width: 100%; /* Set width to 100% */
+}
+.sidebar ul li a{
+    color: black;
+    display: flex;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    margin-top: 50px;
+    padding: 10px; /* Add padding for better spacing */
+    width: 100%;
+    box-sizing: border-box;
+}
+.sidebar ul li a:hover{
+    background-color: black;
+    color: white;
+}
+.sidebar ul li a i{
+    min-width: 70px;
+    text-align: center;
+    height: 30px;
+    border-radius: 12px;
+    line-height: 30px;
+
+}
+.sidebar .nav-item {
+    opacity: 0; /* Initially hide the nav items */
+    transition: opacity 0.5s ease; /* Add transition for smooth visibility change */
+}
+
+.sidebar.active .nav-item {
+    opacity: 1; /* Show the nav items when the sidebar is active */
+}
+
+.sidebar ul li {
+    display: block; /* Change display to block to move items to a new line */
+    margin-top: 10px; /* Add margin for spacing */
+}
+.sidebar.user {
+    display: block; /* Change display to block to move items to a new line */
+    margin-top: 10px; /* Add margin for spacing */
+}
+.sidebar.active .logo {
+    opacity: 0; /* Hide the logo when the sidebar is active */
+}
+
+    
+
+
+  
+
+
